@@ -1,0 +1,46 @@
+
+@import "../../assets/scss/global";
+
+header {
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 70px ;
+    nav {
+        ul {
+            display: flex;
+            li {
+                width: 136px;
+                height: 34px;
+                a {
+                    color: $main-orange-color;
+                    font-size:24px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+    header {
+        img {
+            width: 145px;
+        }
+        margin: 10px;
+        nav{
+            ul {
+                li {
+
+                    a {
+                        text-transform: uppercase;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+  }

@@ -1,0 +1,15 @@
+// reset 
+@import "reset";
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+$font-family-Montserrat:'Montserrat', sans-serif;
+
+// color
+$main-orange-color: #FF6060;
+
+
+* { 
+    font-family: $font-family-Montserrat;
+}
+
