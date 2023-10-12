@@ -1,0 +1,36 @@
+@import "../../assets/scss/global";
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    background-color: $black-color;
+    color: white;
+    height: 209px;
+    img {
+        width: fit-content;
+        margin-bottom: 25px;
+    }
+    p {
+        font-size: 24px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    footer {
+        height: 375px;
+        justify-content: center;
+        img {
+            margin-bottom: 0;
+            width: 150px;
+        }
+        p {
+            font-size: 16px;
+            width: 130px;
+            line-height:17.11px;
+        }
+    }
+   
+}

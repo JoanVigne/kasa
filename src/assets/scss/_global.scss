@@ -7,9 +7,13 @@ $font-family-Montserrat:'Montserrat', sans-serif;
 
 // color
 $main-orange-color: #FF6060;
-
-
+$black-color: #000000; 
+$grey-bg-color: #F6F6F6;
+$border-radius-25: 25px;
 * { 
     font-family: $font-family-Montserrat;
+}
+body {
+    margin: 0;
 }
 

@@ -1,22 +1,34 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import APropos from "./pages/aPropos";
-import Accueil from "./pages/accueil";
-import Error404 from "./pages/error404";
+import APropos from "./pages/Apropos";
+import Accueil from "./pages/Accueil";
+import Error404 from "./pages/Error404";
+import Layout from "./Layout";
+import Logement from "./pages/Logement";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Accueil />,
-  },
-  {
-    path: "/aPropos",
-    element: <APropos />,
-  },
-  {
-    path: "/*",
-    element: <Error404 />,
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Accueil />,
+      },
+      {
+        path: "/aPropos",
+        element: <APropos />,
+      },
+      {
+        path: "/logement/:id",
+        element: <Logement />,
+      },
+      {
+        path: "/*",
+        element: <Error404 />,
+      },
+    ],
   },
 ]);
 

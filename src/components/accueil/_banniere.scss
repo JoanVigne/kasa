@@ -1,0 +1,51 @@
+@import "../../assets/scss/global";
+
+.banniere {
+    /*  */
+    background-image: url("../../assets/img/mer.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*  */
+    height:223px;
+    margin-bottom: 50px;
+    border-radius: $border-radius-25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+   /*  ::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5); 
+      } */
+      h1 {
+        font-size: 48px;
+        font-weight: 500;
+        color: white;
+        line-height: 24px;
+    }
+   
+}
+
+@media only screen and (max-width: 768px) {
+    .banniere {
+        width:auto;
+        min-width: 335px;
+        height: 130px;
+        justify-content: flex-start;
+        border-radius: 10px;
+        margin-bottom: 0;
+      
+        h1 {
+            margin-left: 20px;
+            width: 275px;
+            font-size: 30px;
+            
+        }
+    }
+}

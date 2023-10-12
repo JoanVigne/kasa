@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import logokasa from "../../assets/img/LOGO-KASA.png";
 import "./_header.scss";
 
@@ -8,11 +9,11 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <a href="/">Accueil</a>
+            <NavLink to="/">Accueil</NavLink>
           </li>
 
           <li>
-            <a href="/aPropos">A Propos</a>
+            <NavLink to="/aPropos">A Propos</NavLink>
           </li>
         </ul>
       </nav>

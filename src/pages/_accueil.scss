@@ -1,0 +1,19 @@
+@import "../assets/scss/global";
+
+main {
+    min-width: 1240px;  
+    margin: 10px 100px;
+}
+
+@media only screen and (max-width: 1240px) {
+    main{
+        min-width: 768px;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+    main {
+        min-width: 335px;
+        margin: 20px;
+    }
+}
