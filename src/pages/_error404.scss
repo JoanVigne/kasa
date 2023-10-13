@@ -6,7 +6,7 @@
     * {
         color: $main-orange-color;
         text-align: center;
-        margin: 50px auto;
+        margin: 100px auto;
     }
     h1 {
         font-weight: 700;
@@ -16,7 +16,9 @@
         font-size: 36px;
     }
     a {
+        display: block;
         font-size: 18px;
+        text-decoration: underline;
     }
 }
 
@@ -24,7 +26,12 @@
     .error404 {
     h1 {
         font-size: 96px;
-
+    }
+    h2 {
+        font-size: 18px;
+    }
+    a {
+        font-size: 14px;
     }
 }
 

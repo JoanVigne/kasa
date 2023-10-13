@@ -1,6 +1,5 @@
 import React from "react";
 import "./_banniere.scss";
-import imgMer from "../../assets/img/mer.png";
 
 const banniere = () => {
   return (

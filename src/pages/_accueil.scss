@@ -1,8 +1,17 @@
-@import "../assets/scss/global";
+@import "../assets/scss/global.scss";
 
 main {
-
     margin: 10px 100px;
+}
+
+.accueil {
+    .banniere {
+    background-image: url("../assets/img/mer.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
 }
 
 @media only screen and (max-width: 1240px) {

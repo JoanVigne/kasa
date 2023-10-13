@@ -1,0 +1,48 @@
+@import "../../assets/scss/global";
+
+.cardApropos{
+    border-radius: 10px;
+    .title-arrow {
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        background-color: $main-orange-color;
+        color: white;
+        padding: 15px;
+        .title {
+         font-size: 24px;
+        }
+        img {
+            object-fit: contain;
+            rotate: 0;
+            transition: rotate ease-in-out 0.3s;
+        }
+    }
+    .containerP {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        border-radius: 0 0 10px 10px;
+    }
+    p {
+        
+        background-color: $grey-bg-color;
+        color: $main-orange-color;
+        font-size: 20px;
+        padding: 20px;
+        //
+        transform: translateY(-200%);
+        transition: transform 0.4s ease-in-out;
+    }
+    .open {
+        max-height: 200px;
+     
+    }
+    .para-coming {
+        transform: translateY(0);
+    }
+    .rotate {
+        rotate: -180deg
+    }
+
+}
