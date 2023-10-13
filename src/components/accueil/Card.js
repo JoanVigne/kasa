@@ -1,12 +1,11 @@
 import React from "react";
 import "./_card.scss";
 const Card = (props) => {
-  console.log(props);
+  console.log(props.data);
   return (
     <div className="card">
-      {/*  props */}
-      <img src="" alt="img location en props" />
-      <figcaption>{/*  props */} titre de la location</figcaption>
+      <img src={props.data.cover} alt={props.data.title} />
+      <figcaption>{props.data.title}</figcaption>
     </div>
   );
 };

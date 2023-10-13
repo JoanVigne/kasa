@@ -1,14 +1,17 @@
 .card{
-    background-color: red;
     opacity: 0.6;
-    margin: 50px;
-    width: 340px;
+    margin: 10%;
     height: 340px;
     border-radius: 10px;
     position: relative;
+    img {
+        object-fit: none;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
     figcaption {
         width: 150px;
-
         position: absolute;
         bottom: 10px;
         left: 20px;
@@ -21,16 +24,12 @@
 
 @media only screen and (max-width: 1240px) {
     .card {
-        margin: 50px auto;
-        
+        margin: 20px auto;
+        max-width: 380px;
     }
-
 
 }
 
-@media only screen and (max-width: 768px) {
-    .card {
-        width: auto;
-        margin: 20px 0;
-    }
+@media only screen and (max-width: 890px) {
+
 }

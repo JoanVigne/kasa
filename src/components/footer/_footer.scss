@@ -1,6 +1,7 @@
 @import "../../assets/scss/global";
 
 footer {
+    margin-top: 50px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -20,6 +21,7 @@ footer {
 
 @media only screen and (max-width: 768px) {
     footer {
+        margin-top: 20px;
         height: 375px;
         justify-content: center;
         img {
