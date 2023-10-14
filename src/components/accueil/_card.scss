@@ -1,13 +1,28 @@
+@import "../../assets/scss/global";
+
 .card{
     opacity: 0.6;
-    margin: 10%;
+    margin: 3%;
     height: 340px;
+    width: 340px;
     border-radius: 10px;
     position: relative;
     img {
         object-fit: none;
         height: 100%;
         width: 100%;
+        border-radius: 10px;
+    }
+    span {
+
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(237,236,244,0.2) 0%, rgba(84, 84, 84,0.5) 62%);
+
         border-radius: 10px;
     }
     figcaption {
@@ -24,12 +39,14 @@
 
 @media only screen and (max-width: 1240px) {
     .card {
+        height: 255px;
         margin: 20px auto;
+        width: auto;
         max-width: 380px;
     }
 
 }
 
-@media only screen and (max-width: 890px) {
+/* @media only screen and (max-width: 890px) {
 
-}
+} */

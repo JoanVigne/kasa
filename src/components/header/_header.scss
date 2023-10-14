@@ -24,6 +24,7 @@ header {
 
 @media only screen and (max-width: 768px) {
     header {
+        flex-wrap: wrap;
         img {
             width: 155px;
             padding-right: 10px;
@@ -31,6 +32,7 @@ header {
         margin: 10px;
         nav{
             ul {
+                width: 165px;
                 li {
                     width: 100px;
 

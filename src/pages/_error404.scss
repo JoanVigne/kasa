@@ -6,19 +6,24 @@
     * {
         color: $main-orange-color;
         text-align: center;
-        margin: 100px auto;
+
     }
     h1 {
         font-weight: 700;
-        font-size: 288px;
+        font-size: 288px;        
+        margin: 100px auto;
     }
     h2 {
         font-size: 36px;
+      display: flex;
+      flex-wrap: wrap;
+justify-content: center;
     }
     a {
         display: block;
         font-size: 18px;
         text-decoration: underline;
+        margin: 140px auto;
     }
 }
 
@@ -28,10 +33,12 @@
         font-size: 96px;
     }
     h2 {
+        display: flex;
+        flex-direction: column;
         font-size: 18px;
     }
     a {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 

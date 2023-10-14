@@ -3,21 +3,22 @@
 .gallerie {
     background-color: $grey-bg-color;
     border-radius: $border-radius-25;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
 }
-
+/* 
 @media only screen and (max-width: 1240px) {
     .gallerie {
-        grid-template-columns: 1fr 1fr;
+        
         
     }
 
 
-}
+} */
 @media only screen and (max-width: 890px) {
     .gallerie {
         background-color: white;
-        grid-template-columns: 1fr;
+
     }
 }

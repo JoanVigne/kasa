@@ -1,7 +1,8 @@
 @import "../../assets/scss/global";
 
-.cardApropos{
+.boxApropos{
     border-radius: 10px;
+    margin: 3% 6%;
     .title-arrow {
         border-radius: 10px;
         display: flex;
@@ -35,11 +36,12 @@
         transition: transform 0.4s ease-in-out;
     }
     .open {
-        max-height: 200px;
+        max-height: 1550px;
      
     }
     .para-coming {
         transform: translateY(0);
+        overflow-y: scroll;
     }
     .rotate {
         rotate: -180deg

@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import "./_box.scss";
 import arrow from "../../assets/img/arrow.png";
 
-const Box = () => {
+const Box = (props) => {
+  console.log(props);
+
   const [openClose, setOpenClose] = useState(false);
   const toggleParagraph = () => {
     setOpenClose(!openClose);
   };
 
   return (
-    <div className="cardApropos">
+    <div className="boxApropos">
       <div className="title-arrow">
-        <div className="title">title</div>
+        <div className="title">{props.data.title}</div>
         <img
           className={openClose ? "rotate" : ""}
           src={arrow}
@@ -21,12 +23,7 @@ const Box = () => {
         ></img>
       </div>
       <div className={` containerP ${openClose ? "open" : ""}`}>
-        <p className={openClose ? "para-coming" : ""}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-          nam dolor repellendus ex at tenetur. Molestias alias facere odit, hic
-          eos, reprehenderit nesciunt qui blanditiis quis, eius iste placeat
-          nemo.
-        </p>
+        <p className={openClose ? "para-coming" : ""}>{props.data.content}</p>
       </div>
     </div>
   );
