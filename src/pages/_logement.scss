@@ -1,0 +1,183 @@
+@import "./../assets/scss/global";
+
+.logement {
+    color: $main-orange-color;
+  
+    .infoContainer {
+        display: flex;
+        justify-content: space-between;
+        .titre-location-tags-container {
+            max-width: 70%;
+            h1 {
+                font-size: 36px;
+                font-weight: 500;
+                margin: 22px 0 0 0;
+            }
+            h2 {
+                margin:  10px 0;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            .buttons {
+                display: flex;
+                flex-wrap: wrap;
+                button {
+                    background-color: $main-orange-color;
+                    color: white;
+                    border-radius: 12px;
+                    border: 0;
+                    margin: 15px 15px 30px 0;
+                    padding: 7px 40px;
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+            }
+           
+        }
+        .host-rating {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .host {
+                display: flex;
+                align-items: center;
+                width: 167px;
+                h3 {
+                font-size: 18px;
+                text-align: right;
+                line-height: 25.67px;
+                margin-right: 10px;
+                font-weight: 500;
+                }
+                img {
+                border-radius: 50%;
+                width: 64px;
+                height: 64px;
+                }   
+            }
+
+          
+        }
+       
+    }
+   
+}
+
+
+.description-equipement-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    border-radius: 10px;
+    width: 47%;
+
+    .title-arrow {
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        background-color: $main-orange-color;
+        color: white;
+        padding: 15px;
+        .title {
+         font-size: 24px;
+        }
+        img {
+            object-fit: contain;
+            rotate: 0;
+            transition: rotate ease-in-out 0.3s;
+        }
+    }
+    .containerP {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        border-radius: 0 0 10px 10px;
+    }
+    p, ul {    
+            background-color: $grey-bg-color;
+            color: $main-orange-color;
+            font-size: 20px;
+            padding: 20px;
+            //
+            transform: translateY(-200%);
+            transition: transform 0.4s ease-in-out;
+    }
+    .open {
+        max-height: 1550px;
+     
+    }
+    .para-coming {
+        transform: translateY(0);
+    }
+    .rotate {
+        rotate: -180deg
+    }
+
+}
+
+@media only screen and (max-width: 890px) {
+    .logement {
+        
+            .infoContainer {
+                flex-direction: column;
+                .titre-location-tags-container {
+                    max-width: 100%;
+                    h1{
+                        font-size: 22px;
+                    }
+                    h2{
+                        font-size: 18px;
+                    }
+                    .buttons {
+                        
+                        button {
+                            margin: 6px 15px 3px 0;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .host-rating {
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    justify-content: space-between;
+                   
+                    .host {
+                        justify-content: flex-end;
+                        h3 {
+                            font-size: 14px;
+                            line-height: 17.11px;
+                            max-width: 90px;
+                        }
+                        img {
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+                    .rating{
+                        min-width: auto;
+                        width: -webkit-fill-available;
+                    }
+                }
+            }
+    }
+    .description-equipement-container{
+        flex-direction: column;
+        align-items: center;
+        .box {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            .title-arrow {
+               img {
+                width: 22px;
+               }
+               .title {
+                font-size: 18px;
+             }
+            }
+         
+            }
+        }
+}

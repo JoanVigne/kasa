@@ -1,8 +1,10 @@
 @import "../../assets/scss/global";
 
 .card{
+
+    cursor: pointer;
     opacity: 0.6;
-    margin: 3%;
+    margin: 3% 2%;
     height: 340px;
     width: 340px;
     border-radius: 10px;
@@ -41,7 +43,7 @@
     .card {
         height: 255px;
         margin: 20px auto;
-        width: auto;
+
         max-width: 380px;
     }
 

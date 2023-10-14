@@ -1,0 +1,12 @@
+.rating {
+    min-width: 180px;
+}
+
+@media only screen and (max-width: 890px) {
+    .rating {
+        min-width: auto;
+        img {
+            height: 25px;
+        }
+    }
+}

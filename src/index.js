@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import APropos from "./pages/Apropos";
 import Accueil from "./pages/Accueil";
 import Error404 from "./pages/Error404";
+
 import Layout from "./Layout";
 import Logement from "./pages/Logement";
 

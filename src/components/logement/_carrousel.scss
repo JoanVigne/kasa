@@ -1,0 +1,41 @@
+@import "../../assets/scss/global";
+
+.carrousel {
+    position: relative;
+    img {
+        border-radius: $border-radius-25;
+        object-fit: cover;
+        height:415px;
+        width: 100%;
+    }
+    .arrowLeft {
+        position: absolute;
+        left: 0;
+        object-fit: contain;
+        width: 96px;
+    }
+    .arrowRight {
+        position: absolute;
+        right: 0;
+        object-fit: contain;
+        width: 96px;
+    }
+}
+
+@media only screen and (max-width: 890px) {
+    .carrousel {
+        img {
+            border-radius: 10px;
+            height: 255px;
+        }
+        .arrowLeft {
+
+            width: 26px;
+        }
+        .arrowRight {
+
+            width: 26px;
+        }
+
+    }
+}
