@@ -6,23 +6,34 @@ import "./_carrousel.scss";
 const Carrousel = ({ images }) => {
   const [index, setIndex] = useState(0);
 
-  function imageSuivante() {
-    if (index < images.length - 1) {
-      setIndex(index + 1);
-    } else {
-      setIndex(0);
-    }
-  }
+  const [loaded, setLoaded] = useState(true);
 
+  function imageSuivante() {
+    // enleve la classe "loaded" pour faire disparaitre le carrousel.
+    setLoaded(false);
+    // 0.3s apres, changement d'image et ajout de .loaded pour apparition transition opacity
+    setTimeout(() => {
+      if (index < images.length - 1) {
+        setIndex(index + 1);
+      } else {
+        setIndex(0);
+      }
+      setLoaded(true);
+    }, 300);
+  }
   function imagePrecedente() {
-    if (index <= 0) {
-      setIndex(images.length - 1);
-    } else {
-      setIndex(index - 1);
-    }
+    setLoaded(false);
+    setTimeout(() => {
+      if (index <= 0) {
+        setIndex(images.length - 1);
+      } else {
+        setIndex(index - 1);
+      }
+      setLoaded(true);
+    }, 300);
   }
   return (
-    <div className="carrousel">
+    <div className={`carrousel ${loaded ? "loaded" : ""}`}>
       <img src={images[index]} alt="aperçu logement" />
       <img
         className="arrow arrowLeft"

@@ -2,12 +2,18 @@
 
 .carrousel {
     position: relative;
+    opacity: 0;
+    transition: opacity 0.3s;
+    &.loaded {
+        opacity: 1;
+      }
     img {
         border-radius: $border-radius-25;
         object-fit: cover;
         height:415px;
         width: 100%;
-    }
+        opacity: 1;
+      }
     .arrow {
         cursor: pointer;
         position: absolute;
