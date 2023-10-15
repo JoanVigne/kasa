@@ -26,17 +26,22 @@ const Carrousel = ({ images }) => {
       <img src={images[index]} alt="aperçu logement" />
       <img
         className="arrow arrowLeft"
+        style={{ visibility: images.length === 1 ? "hidden" : "visible" }}
         src={arrowLeft}
         alt=""
         onClick={imagePrecedente}
       />
       <img
         className="arrow arrowRight"
+        style={{ visibility: images.length === 1 ? "hidden" : "visible" }}
         src={arrowRight}
         alt=""
         onClick={imageSuivante}
       />
-      <div className="numerotation">
+      <div
+        className="numerotation"
+        style={{ visibility: images.length === 1 ? "hidden" : "visible" }}
+      >
         {index + 1}/{images.length}
       </div>
     </div>
