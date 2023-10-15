@@ -1,7 +1,18 @@
 
 .apropos {
-
     h1 {
         display: none;
+    }
+    .collapse {
+        margin: 3% 7%;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 890px) {
+    .apropos {
+        .collapse {
+            margin: 5% auto;
+        }
     }
 }

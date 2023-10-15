@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import arrow from "../assets/img/arrow.png";
 
 import "./_logement.scss";
 import Stars from "../components/logement/Stars";
 import Carrousel from "../components/logement/Carrousel";
+import Collapse from "../components/Collapse";
 
 export default function Logement() {
   // fetch logement
@@ -32,16 +32,6 @@ export default function Logement() {
     };
     fetchData();
   }, [id]);
-
-  // Ouvrir/Fermer les boîtes
-  const [openCloseDescription, setopenCloseDescription] = useState(false);
-  const toggleDescription = () => {
-    setopenCloseDescription(!openCloseDescription);
-  };
-  const [openCloseEquipment, setopenCloseEquipment] = useState(false);
-  const toggleEquipments = () => {
-    setopenCloseEquipment(!openCloseEquipment);
-  };
 
   if (loading) {
     return <p>Chargement en cours...</p>;
@@ -73,46 +63,21 @@ export default function Logement() {
       </div>
 
       <div className="description-equipement-container">
-        <div className="box boxDescription">
-          <div className="title-arrow">
-            <div className="title">Description</div>
-            <img
-              className={openCloseDescription ? "rotate" : ""}
-              src={arrow}
-              alt="flèche cliquable"
-              tabIndex="0"
-              onClick={toggleDescription}
-            />
-          </div>
-          <div className={`containerP ${openCloseDescription ? "open" : ""}`}>
-            <p className={openCloseDescription ? "para-coming" : ""}>
-              {ceLogement.description || "Description non disponible"}
-            </p>
-          </div>
-        </div>
-        <div className="box boxEquipement">
-          <div className="title-arrow">
-            <div className="title">Équipements</div>
-            <img
-              className={openCloseEquipment ? "rotate" : ""}
-              src={arrow}
-              alt="flèche cliquable"
-              tabIndex="0"
-              onClick={toggleEquipments}
-            />
-          </div>
-          <div className={`containerP ${openCloseEquipment ? "open" : ""}`}>
-            <ul className={openCloseEquipment ? "para-coming" : ""}>
-              {ceLogement.equipments && ceLogement.equipments.length > 0 ? (
-                ceLogement.equipments.map((equipment, index) => (
+        <Collapse
+          title="Description"
+          content={ceLogement.description || "Description non disponible"}
+        />
+        <Collapse
+          title="Équipements"
+          content={
+            ceLogement.equipments && ceLogement.equipments.length > 0
+              ? ceLogement.equipments.map((equipment, index) => (
                   <li key={index}>{equipment}</li>
                 ))
-              ) : (
-                <li>Aucun équipement disponible</li>
-              )}
-            </ul>
-          </div>
-        </div>
+              : <li>Aucun équipement disponible</li> ||
+                "Équipements non disponible"
+          }
+        />
       </div>
     </main>
   );

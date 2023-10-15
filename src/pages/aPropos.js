@@ -1,8 +1,9 @@
 import "./_apropos.scss";
 import Banniere from "../components/Banniere";
-import Box from "../components/apropos/Box.js";
+
 import { useEffect, useState } from "react";
 import imgApropos from "../assets/img/montagne.png";
+import Collapse from "../components/Collapse";
 
 export default function APropos() {
   const [boxAproposContent, setboxAproposContent] = useState([]);
@@ -29,10 +30,13 @@ export default function APropos() {
     <>
       <main className="apropos">
         <Banniere img={imgApropos} />
-
         {boxAproposContent != null &&
           boxAproposContent.map((content, index) => (
-            <Box key={index} data={content} />
+            <Collapse
+              key={index}
+              title={content.title}
+              content={content.content}
+            />
           ))}
       </main>
     </>

@@ -2,10 +2,10 @@
 
 .logement {
     color: $main-orange-color;
-  
     .infoContainer {
         display: flex;
         justify-content: space-between;
+        align-items: baseline;
         .titre-location-tags-container {
             max-width: 70%;
             h1 {
@@ -55,12 +55,8 @@
                 height: 64px;
                 }   
             }
-
-          
-        }
-       
+        }      
     }
-   
 }
 
 
@@ -68,51 +64,9 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
-.box{
-    border-radius: 10px;
-    width: 47%;
-
-    .title-arrow {
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
-        background-color: $main-orange-color;
-        color: white;
-        padding: 15px;
-        .title {
-         font-size: 24px;
-        }
-        img {
-            object-fit: contain;
-            rotate: 0;
-            transition: rotate ease-in-out 0.3s;
-        }
-    }
-    .containerP {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-        border-radius: 0 0 10px 10px;
-    }
-    p, ul {    
-            background-color: $grey-bg-color;
-            color: $main-orange-color;
-            font-size: 20px;
-            padding: 20px;
-            //
-            transform: translateY(-200%);
-            transition: transform 0.4s ease-in-out;
-    }
-    .open {
-        max-height: 1550px;
-     
-    }
-    .para-coming {
-        transform: translateY(0);
-    }
-    .rotate {
-        rotate: -180deg
+    .collapse {  
+        margin: 0;
+        width: 47%;
     }
 
 }
@@ -122,6 +76,7 @@
         
             .infoContainer {
                 flex-direction: column;
+                align-items: normal;
                 .titre-location-tags-container {
                     max-width: 100%;
                     h1{
@@ -131,7 +86,6 @@
                         font-size: 18px;
                     }
                     .buttons {
-                        
                         button {
                             margin: 6px 15px 3px 0;
                             font-size: 12px;
@@ -141,8 +95,7 @@
                 .host-rating {
                     flex-direction: row-reverse;
                     align-items: center;
-                    justify-content: space-between;
-                   
+                    justify-content: space-between;                 
                     .host {
                         justify-content: flex-end;
                         h3 {
@@ -165,19 +118,9 @@
     .description-equipement-container{
         flex-direction: column;
         align-items: center;
-        .box {
+        .collapse {  
+            margin: 10px;
             width: 100%;
-            padding: 5px;
-            margin-bottom: 10px;
-            .title-arrow {
-               img {
-                width: 22px;
-               }
-               .title {
-                font-size: 18px;
-             }
-            }
-         
             }
         }
 }
