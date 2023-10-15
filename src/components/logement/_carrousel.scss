@@ -8,17 +8,24 @@
         height:415px;
         width: 100%;
     }
-    .arrowLeft {
+    .arrow {
+        cursor: pointer;
         position: absolute;
-        left: 0;
         object-fit: contain;
         width: 96px;
     }
+    .arrowLeft {
+        left: 0;
+    }
     .arrowRight {
-        position: absolute;
         right: 0;
-        object-fit: contain;
-        width: 96px;
+    }
+    .numerotation {
+        position: absolute;
+        color: white;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 

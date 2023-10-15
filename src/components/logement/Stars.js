@@ -12,13 +12,7 @@ const Stars = ({ numberOfImages }) => {
   if (images.length !== 5) {
     let numberOfEmptyStars = 5 - numberOfImages;
     for (let i = 0; i < numberOfEmptyStars; i++) {
-      images.push(
-        <img
-          key={i + numberOfEmptyStars}
-          src={starInactive}
-          alt="étoile vide"
-        />
-      );
+      images.push(<img key={i + 5} src={starInactive} alt="étoile vide" />);
     }
   }
 

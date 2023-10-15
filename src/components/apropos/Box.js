@@ -3,8 +3,6 @@ import "./_box.scss";
 import arrow from "../../assets/img/arrow.png";
 
 const Box = (props) => {
-  console.log(props);
-
   const [openClose, setOpenClose] = useState(false);
   const toggleParagraph = () => {
     setOpenClose(!openClose);

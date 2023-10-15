@@ -25,17 +25,20 @@ const Carrousel = ({ images }) => {
     <div className="carrousel">
       <img src={images[index]} alt="aperçu logement" />
       <img
-        className="arrowLeft"
+        className="arrow arrowLeft"
         src={arrowLeft}
         alt=""
         onClick={imagePrecedente}
       />
       <img
-        className="arrowRight"
+        className="arrow arrowRight"
         src={arrowRight}
         alt=""
         onClick={imageSuivante}
       />
+      <div className="numerotation">
+        {index + 1}/{images.length}
+      </div>
     </div>
   );
 };

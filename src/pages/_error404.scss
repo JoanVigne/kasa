@@ -18,6 +18,9 @@
       display: flex;
       flex-wrap: wrap;
 justify-content: center;
+            :first-child {
+                margin-right: 10px;
+            }
     }
     a {
         display: block;
