@@ -1,5 +1,5 @@
-import Banniere from "../components/Banniere";
-import Gallerie from "../components/accueil/Gallerie";
+import Banniere from "../components/banniere";
+import Gallerie from "../components/accueil/gallerie";
 import imgGallerie from "../assets/img/mer.png";
 
 export default function Accueil() {

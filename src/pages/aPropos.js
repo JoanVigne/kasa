@@ -1,9 +1,9 @@
 import "./_apropos.scss";
-import Banniere from "../components/Banniere";
+import Banniere from "../components/banniere";
 
 import { useEffect, useState } from "react";
 import imgApropos from "../assets/img/montagne.png";
-import Collapse from "../components/Collapse";
+import Collapse from "../components/collapse";
 
 export default function APropos() {
   const [boxAproposContent, setboxAproposContent] = useState([]);

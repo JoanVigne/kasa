@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import "./_logement.scss";
-import Stars from "../components/logement/Stars";
-import Carrousel from "../components/logement/Carrousel";
-import Collapse from "../components/Collapse";
+import Stars from "../components/logement/stars";
+import Carrousel from "../components/logement/carrousel";
+import Collapse from "../components/collapse";
 
 export default function Logement() {
   // fetch logement

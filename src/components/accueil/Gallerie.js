@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import "./_gallerie.scss";
-import Card from "./Card";
+import Card from "./card";
 
 const Gallerie = () => {
   const [logements, setDataLogements] = useState([]);
