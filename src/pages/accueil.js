@@ -1,5 +1,4 @@
 import Banniere from "../components/Banniere";
-import "./_accueil.scss";
 import Gallerie from "../components/accueil/Gallerie";
 import imgGallerie from "../assets/img/mer.png";
 

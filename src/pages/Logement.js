@@ -37,6 +37,16 @@ export default function Logement() {
     return <p>Chargement en cours...</p>;
   }
 
+  if (Object.keys(ceLogement).length === 0) {
+    return (
+      <main className="logement">
+        <h1 style={{ textAlign: "center" }}>
+          Ce logement n'est plus disponible
+        </h1>
+      </main>
+    );
+  }
+
   return (
     <main className="logement">
       {ceLogement.cover && <Carrousel images={ceLogement.pictures} />}
